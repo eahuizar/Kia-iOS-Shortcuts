@@ -6,9 +6,9 @@ from hyundai_kia_connect_api.exceptions import AuthenticationError
 app = Flask(__name__)
 
 # Get credentials from environment variables
-USERNAME = os.environ.get('9092822105')
-PASSWORD = os.environ.get('959808Eh')
-PIN = os.environ.get('9808')
+USERNAME = os.environ.get('KIA_USERNAME')
+PASSWORD = os.environ.get('KIA_PASSWORD')
+PIN = os.environ.get('KIA_PIN')
 
 if USERNAME is None or PASSWORD is None or PIN is None:
     raise ValueError("Missing credentials! Check your environment variables.")
@@ -38,7 +38,7 @@ except Exception as e:
     exit(1)
 
 # Secret key for security - moved to environment variables
-SECRET_KEY = os.environ.get("959808")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 if not SECRET_KEY:
     raise ValueError("Missing SECRET_KEY environment variable.")
 
