@@ -6,8 +6,8 @@ from hyundai_kia_connect_api.exceptions import AuthenticationError
 app = Flask(__name__)
 
 # Get credentials from environment variables
-USERNAME = os.environ.get('KIA_USERNAME')
-PASSWORD = os.environ.get('KIA_PASSWORD')
+USERNAME = os.environ.get('9092822105')
+PASSWORD = os.environ.get('959808Eh')
 PIN = os.environ.get('KIA_PIN')
 
 if USERNAME is None or PASSWORD is None or PIN is None:
